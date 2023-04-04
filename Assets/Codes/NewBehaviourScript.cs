@@ -23,21 +23,20 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(CreateBullet());
+        CreateBullet();
     
           
     }
 
-    float CreateBullet()
+    void CreateBullet()
     {
         if (bulletTime <=0f)
         {
-            GameObject newObject = Instantiate(bullet, transform.position, transform.rotation);
+            //GameObject newObject = Instantiate(bullet, transform.position, transform.rotation);
+            GameObject newObject = Instantiate(bullet,transform.position, Quaternion.Euler(0,0,90));
             bulletTime = bulletTimeInterval;
             Destroy(newObject, hajoo);
         }
         bulletTime -= Time.deltaTime;
-
-        return 2f;
     }
 }

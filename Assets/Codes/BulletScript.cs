@@ -16,7 +16,7 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        velocity = new Vector3(1*Time.deltaTime,0,0);
+        velocity = new Vector3(30*Time.deltaTime,0,0);
         transform.position += velocity;
     }
 }
